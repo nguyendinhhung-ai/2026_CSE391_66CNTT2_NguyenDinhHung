@@ -1,0 +1,143 @@
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  font-size: 13px;
+  color: #000;
+}
+
+.container_fluid {
+  width: 100%;
+}
+
+.container {
+  width: 900px;
+  margin: 20px auto;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.pd-body {
+  padding: 15px 20px;
+}
+
+.produce {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+}
+
+.produce::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #999;
+  margin: 6px 0 12px;
+}
+
+.form-group,
+.form-row,
+section > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+label {
+  width: 160px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="datetime-local"],
+input[type="tel"],
+select {
+  width: 520px;
+  padding: 3px 6px;
+  border: 1px solid #bdbdbd;
+  background: #fff;
+  font-size: 13px;
+}
+
+input[disabled] {
+  background: #eee;
+}
+
+span {
+  padding-left: 5px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 4px;
+}
+
+.gender-option,
+.checkbox-group label {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.note {
+  align-items: flex-start;
+}
+
+textarea {
+  width: 520px;
+  height: 130px;
+  padding: 6px;
+  border: 1px solid #bdbdbd;
+  resize: none;
+  font-size: 13px;
+}
+
+.click {
+  display: flex;
+  flex-direction: column;
+}
+
+.click img {
+  width: 160px;
+  margin-bottom: 4px;
+}
+
+.click2ch {
+  font-size: 11px;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.click input {
+  width: 200px;
+}
+
+button {
+  background: #666;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.required-note {
+  font-size: 11px;
+  margin-top: 5px;
+  display: inline-block;
+}

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Form</title>
+
+  <link rel="stylesheet" href="./Bai4.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+  />
+</head>
+
+<body>
+  <div class="container_fluid">
+    <div class="container white-bg pd-body">
+
+    <form action="#" class="employee-form">
+
+  <section class="form-section">
+    <h3 class="section-title">Basic Info</h3>
+
+    <div class="form-row">
+      <label>Employee ID</label>
+      <span class="static-text">9</span>
+    </div>
+
+    <div class="form-row">
+      <label>Last Name</label>
+      <span class="static-text">Dodsworth</span>
+    </div>
+
+    <div class="form-row">
+      <label for="firstName">First Name</label>
+      <input id="firstName" type="text" value="Anne">
+    </div>
+
+    <div class="form-row">
+        <label class="label-left">Gender</label>
+
+        <div class="gender-group">
+            <label class="gender-option">
+                <input type="radio" name="gender"> Male
+        </label>
+            <label class="gender-option">
+             <input type="radio" name="gender"> Female
+        </label>
+            <label class="gender-option">
+             <input type="radio" name="gender"> XXX
+        </label>
+            <label class="gender-option">
+                <input type="radio" name="gender" checked> ZZZ
+    </label>
+  </div>
+    </div>
+
+    <div class="form-row">
+      <label for="title">Title</label>
+      <input id="title" type="text" value="Sales Representative">
+    </div>
+
+    <div class="form-row">
+      <label for="suffix">Suffix</label>
+      <input id="suffix" type="text" value="Ms.">
+    </div>
+
+    <div class="form-row">
+      <label for="birthDate">BirthDate</label>
+      <input id="birthDate" type="datetime-local" value="1969-07-02T00:00">
+    </div>
+
+    <div class="form-row">
+      <label for="hireDate">HireDate</label>
+      <input id="hireDate" type="datetime-local" value="1994-11-15T00:00">
+    </div>
+
+    <div class="form-row">
+      <label for="ssn">SSN# (if applicable)</label>
+      <input id="ssn" type="password">
+    </div>
+
+    <div class="form-row">
+      <label for="reportTo">Reports To</label>
+      <select id="reportTo">
+        <option selected>Buchanan</option>
+        <option>NY</option>
+        <option>TL</option>
+      </select>
+    </div>
+  </section>
+
+
+  <section class="form-section">
+    <h3 class="section-title">Contact Info</h3>
+
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="name@example.com">
+    </div>
+
+    <div class="form-row">
+      <label for="address">Address</label>
+      <input id="address" type="text" value="7 Houndstooth Rd.">
+    </div>
+
+    <div class="form-row">
+      <label for="city">City</label>
+      <input id="city" type="text" value="London">
+    </div>
+
+    <div class="form-row">
+      <label for="region">Region</label>
+      <input id="region" type="text">
+    </div>
+
+    <div class="form-row">
+      <label for="postal">Postal Code</label>
+      <input id="postal" type="text" value="WG2 7LT">
+    </div>
+
+    <div class="form-row">
+      <label for="country">Country</label>
+      <select id="country">
+        <option selected>Russian Federation</option>
+        <option>UK</option>
+        <option>US</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <label for="phone">US Home Phone</label>
+      <input id="phone" type="tel" value="(234)234-2342">
+    </div>
+
+    <div class="form-row">
+      <label for="photo">Photo</label>
+      <input id="photo" type="text" value="EmpID9.bmp">
+    </div>
+  </section>
+
+
+  <section class="form-section">
+    <h3 class="section-title">Optional Info</h3>
+
+    <div class="form-row align-top">
+      <label for="notes">Notes</label>
+      <textarea id="notes" rows="5">
+Anne has a BA degree in English from St. Lawrence College.
+She is fluent in French and German. ZZZ
+      </textarea>
+    </div>
+
+    <div class="form-row">
+      <label>Preferred Shift</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> Regular</label>
+        <label><input type="checkbox" checked> Gravy Yard</label>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label>Active?</label>
+      <input type="checkbox" checked>
+    </div>
+
+    <div class="form-row captcha">
+      <label>Are you human?</label>
+      <div class="captcha-box">
+        <div class="captcha-text">TIDAWQ</div>
+        <small>Click to change</small>
+        <input type="text">
+      </div>
+    </div>
+  </section>
+
+  
+  <div class="form-actions">
+    <div>
+      <button type="button"><i class="bx bx-caret-left"></i></button>
+      <button type="button"><i class="bx bx-caret-right"></i></button>
+    </div>
+
+    <div>
+      <button type="submit"><i class="bx bx-save"></i> Submit</button>
+      <button type="reset"><i class="bx bx-x"></i> Cancel</button>
+    </div>
+  </div>
+
+  <small class="required-note">* required</small>
+</form>
+
+
+    </div>
+  </div>
+</body>
+</html>
