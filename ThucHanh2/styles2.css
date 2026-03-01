@@ -1,0 +1,29 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: #f8f9fa;
+    padding: 15px;
+}
+
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.card {
+    flex: 1 1 300px;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+@media (max-width: 768px) {
+    .posts { flex-direction: column; }
+    .card { flex: 1 1 100%; }
+}
