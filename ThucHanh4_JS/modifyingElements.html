@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành Modifying Elements</title>
+    <style>
+        body {
+            forced-color-adjust: none;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .description {
+            color: #555;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            background: #eaf4fb;
+            margin: 10px 0;
+        }
+        #my-list {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .new-item {
+            color: #d35400;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="main-title">Tiêu đề gốc ban đầu</h1>
+        <div id="content-box"></div>
+        <p class="description">Dòng này sẽ bị xóa sau 3 giây!</p>
+        <p class="description">Dòng mô tả giữ lại.</p>
+        <ul id="my-list">
+            <li>Mục cũ có sẵn 1</li>
+        </ul>
+    </div>
+
+       <script>
+        const title = document.getElementById('main-title');
+        title.textContent = "Tiêu đề đã được thay đổi bằng textContent!";
+
+        const contentBox = document.getElementById('content-box');
+        contentBox.innerHTML = `
+            <div style="padding: 10px; background: #d4edda; border: 1px solid #c3e6cb;">
+                <strong>Thông báo:</strong> Mã HTML này được chèn bằng <em>innerHTML</em>.
+            </div>
+        `;
+        const newItem = document.createElement('li');
+        newItem.textContent = "Mục mới được tạo từ createElement!";
+        newItem.className = "new-item"; 
+        const list = document.getElementById('my-list');
+        list.appendChild(newItem);
+
+        const firstDesc = document.querySelector('.description');
+        firstDesc.remove();
+        console.log("Mọi thao tác DOM đã hoàn tất.");
+    </script>
+</body>
+</html>

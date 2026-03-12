@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            forced-color-adjust: none;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #e6ac24; 
+            transition: background-color 0.5s; 
+        }
+
+        .card {
+            background: rgba(206, 206, 204, 0.836);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            transition: 0.3s;
+        }
+
+        .dark-mode {  
+            background-color: #127eea ;
+        }
+
+        .card-hover {
+            transform: translateY(-10px);
+            border: 2px solid #3498db;
+        }
+
+        h2 { color: #333; transition: 0.3s; }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: 0.2s;
+            font-weight: bold;
+        }
+
+        button:active { transform: scale(0.95); }
+    </style>
+</head>
+<body>
+
+    <div class="card" id="interactive-card">
+        <h2 id="main-title">Chưa có tương tác nào</h2>
+        <p id="description">Hãy thử di chuột vào đây hoặc bấm nút phía dưới.</p>
+        <button id="my-button">Tương tác với tôi!</button>
+    </div>
+
+    <script>
+        const btn = document.getElementById('my-button');
+        const title = document.getElementById('main-title');
+        const card = document.getElementById('interactive-card');
+        const body = document.body;
+
+        btn.addEventListener('click', function() {
+            // Thay đổi văn bản tiêu đề 
+            if (body.classList.contains('dark-mode')) {
+                title.textContent = "Nền đã quay về màu gốc! ";
+            } else {
+                title.textContent = "Nền đã đổi sang Dark Mode! ";
+            }
+            
+            // Toggle class để đổi màu nền Body
+            body.classList.toggle('dark-mode');
+            console.log("Đã đổi nội dung tiêu đề và màu nền trang.");
+        });
+
+        // Sự kiên Mouseenter / Mouseleave
+        card.addEventListener('mouseenter', () => {
+            card.classList.add('card-hover');
+            document.getElementById('description').textContent = "Ồ! Bạn đang ở bên trong tôi. 👇";
+        });
+        card.addEventListener('mouseleave', () => {
+            card.classList.remove('card-hover');
+            document.getElementById('description').textContent = "Hẹn gặp lại bạn nhé! 👋";
+        });
+    </script>
+</body>
+</html>

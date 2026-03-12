@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { forced-color-adjust: none; font-family: Arial; padding: 20px; background: #f0f2f5; text-align: center; }
+        .container { background: white; padding: 30px; border-radius: 12px; max-width: 500px; margin: auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .highlight { border: 5px solid #3498db; transform: scale(1.05); transition: 0.3s; }
+        .hidden { display: none; }
+        .dark-mode { background-color: #333; color: white; }
+        img { width: 200px; height: 200px; border-radius: 10px; margin: 20px 0; object-fit: cover; }
+        button { padding: 10px 15px; margin: 5px; cursor: pointer; border: none; border-radius: 5px; background: #3498db; color: white; }
+        #status-msg { font-weight: bold; margin-top: 15px; color: #2ecc71; }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="box">
+        <h2 id="title">Demo Attributes & Classes</h2>
+        <img id="my-image" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500" alt="Ảnh gốc">
+        <div>
+            <button id="btn-change-attr">Đổi Ảnh (Attributes)</button>
+            <button id="btn-toggle">Bật/Tắt Highlight (Toggle)</button>
+            <button id="btn-check">Kiểm tra Class (Contains)</button>
+        </div>
+        <p id="status-msg"></p>
+    </div>
+
+    <script>
+        // dùng Dot Notation 
+        const img = document.getElementById('my-image');
+        const btnAttr = document.getElementById('btn-change-attr');
+        btnAttr.onclick = function() {
+            img.src = "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500";
+            img.alt = "Đây là ảnh mới đã đổi";
+            img.title = "Hình ảnh được thay đổi bởi JS";
+            console.log("Đã đổi src và alt bằng dot notation!");
+        };
+
+        const box = document.getElementById('box');
+        const btnToggle = document.getElementById('btn-toggle');
+
+        btnToggle.onclick = function() {
+            box.classList.toggle('highlight');
+            const title = document.getElementById('title');
+            if (box.classList.contains('highlight')) {
+                title.style.color = '#3498db';
+            } else {
+                title.style.color = 'black';
+            }
+            console.log("Đã toggle class 'highlight' cho container!");
+        };
+        const btnCheck = document.getElementById('btn-check');
+        const msg = document.getElementById('status-msg');
+
+        btnCheck.onclick = function() {
+            const hasHighlight = box.classList.contains('highlight');
+            console.log("Kiểm tra class 'highlight':", hasHighlight);
+            if (hasHighlight) {
+                msg.textContent = "Trạng thái: Đang có class 'highlight' ✅";
+                msg.style.color = "#2ecc71";
+            } else {
+                msg.textContent = "Trạng thái: Không tìm thấy class 'highlight' ❌";
+                msg.style.color = "#e74c3c";
+            }
+        };
+        document.body.classList.add('ready-animation');
+        box.classList.remove('hidden');
+
+    </script>
+</body>
+</html>

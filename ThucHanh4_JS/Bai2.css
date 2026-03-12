@@ -1,0 +1,128 @@
+body {
+    forced-color-adjust: none;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgb(242, 237, 237);
+    padding: 30px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(243, 239, 239, 0.2);
+}
+/* Thanh tiến trình */
+.step-progress {
+    margin-bottom: 25px;
+}
+
+.progress-info {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+.progress-track {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden; /* Để thanh con không bị lòi ra ngoài */
+}
+
+#mainProgressBar {
+    height: 100%;
+    width: 33.33%;
+    background-color: #3498db;
+    transition: 0.4s ease; /* Hiệu ứng chạy mượt */
+}
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.error {
+    color: #ff0000 !important; /* Đảm bảo luôn có màu đỏ */
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.count {
+    font-size: 12px;
+    color: #666;
+    float: right;
+}
+
+.password-box {
+    position: relative;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* THANH ĐỘ MẠNH MẬT KHẨU */
+.strength {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+#strengthBar {
+    height: 100%;
+    width: 0%;
+    transition: 0.4s; /* Hiệu ứng chạy màu */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px  ;
+}

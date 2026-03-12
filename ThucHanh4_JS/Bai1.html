@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Bai1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <form id="registrationForm" novalidate>
+            <h2>Đăng Ký Tài Khoản</h2>
+
+            <div class="form-group">
+                <label for="fullname">Họ và tên</label>
+                <input type="text" id="fullname" placeholder="Nhập họ và tên..." maxlength="50">
+                <span class="char-count" id="fullnameCount">0/50</span>
+                <small class="error-msg" id="fullnameError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="example@gmail.com">
+                <small class="error-msg" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Số điện thoại</label>
+                <input type="tel" id="phone" placeholder="0xxxxxxxxx">
+                <small class="error-msg" id="phoneError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <div class="input-wrapper">
+                    <input type="password" id="password" placeholder="Tối thiểu 8 ký tự...">
+                    <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+                </div>
+                <div class="strength-meter">
+                    <div class="strength-bar" id="strengthBar"></div>
+                </div>
+                <small class="strength-text" id="strengthText"></small>
+                <small class="error-msg" id="passwordError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Xác nhận mật khẩu</label>
+                <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu">
+                <small class="error-msg" id="confirmPasswordError"></small>
+            </div>
+
+            <div class="form-group">
+                <label>Giới tính</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Nam"> Nam</label>
+                    <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+                    <label><input type="radio" name="gender" value="Khác"> Khác</label>
+                </div>
+                <small class="error-msg" id="genderError"></small>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms">
+                <label for="terms">Tôi đồng ý với các điều khoản dịch vụ</label>
+                <small class="error-msg" id="termsError"></small>
+            </div>
+
+            <button type="submit" id="submitBtn">Đăng Ký Ngay</button>
+        </form>
+
+        <div id="successMessage" class="success-box hidden">
+            <div class="icon">🎉</div>
+            <h3>Đăng ký thành công!</h3>
+            <p>Chào mừng thành viên mới: <strong id="displayName"></strong></p>
+            <button onclick="location.reload()">Quay lại</button>
+        </div>
+    </div>
+
+    <script src="Bai1.js"></script>
+</body>
+</html>
